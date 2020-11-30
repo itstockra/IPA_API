@@ -8,8 +8,8 @@ use DI\ContainerBuilder;
 use Slim\Factory\AppFactory;
 use Slim\Factory\ServerRequestCreatorFactory;
 
-require __DIR__ . '/../vendor/autoload.php';
-require __DIR__ . '/../src/db.php';
+require '/usr/src/app/IPA_API/slimEx/vendor/autoload.php';
+require '/usr/src/app/IPA_API/slimExsrc/src/db.php';
 
 // Instantiate PHP-DI ContainerBuilder
 $containerBuilder = new ContainerBuilder();
