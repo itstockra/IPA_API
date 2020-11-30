@@ -16,3 +16,11 @@ services:
         volumes:
             - .:/var/www
             - logs:/var/www/logs
+            
+    db:
+        image: mysql:7.4
+        environment:
+            MYSQL_ROOT_PASSWORD: 
+            MYSQL_DATABASE: beersDB
+            MYSQL_USER: phpmyadmin
+            MYSQL_PASSWORD: sqlpass
