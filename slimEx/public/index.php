@@ -16,19 +16,19 @@ require './IPA_API/slimEx/php-di/php-di/src/ContainerBuilder.php';
 $containerBuilder = new ContainerBuilder();
 
 if (false) { // Should be set to true in production
-	$containerBuilder->enableCompilation(__DIR__ . '/../var/cache');
+	$containerBuilder->enableCompilation('./IPA_API/slimEx/var/cache');
 }
 
 // Set up settings
-$settings = require __DIR__ . '/../app/settings.php';
+$settings = require './IPA_API/slimEx/app/settings.php';
 $settings($containerBuilder);
 
 // Set up dependencies
-$dependencies = require __DIR__ . '/../app/dependencies.php';
+$dependencies = require './IPA_API/slimEx/app/dependencies.php';
 $dependencies($containerBuilder);
 
 // Set up repositories
-$repositories = require __DIR__ . '/../app/repositories.php';
+$repositories = require './IPA_API/slimEx/app/repositories.php';
 $repositories($containerBuilder);
 
 // Build PHP-DI Container instance
@@ -40,11 +40,11 @@ $app = AppFactory::create();
 $callableResolver = $app->getCallableResolver();
 
 // Register middleware
-$middleware = require __DIR__ . '/../app/middleware.php';
+$middleware = require './IPA_API/slimEx/app/middleware.php';
 $middleware($app);
 
 // Register routes
-$routes = require __DIR__ . '/../app/routes.php';
+$routes = require './IPA_API/slimEx/app/routes.php';
 $routes($app);
 
 /** @var bool $displayErrorDetails */
