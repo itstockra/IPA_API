@@ -10,7 +10,7 @@ use Slim\Factory\ServerRequestCreatorFactory;
 
 require './vendor/autoload.php';
 require './IPA_API/slimEx/src/db.php';
-require './vendor/php-di/php-di/src/ContainerBuilder.php';
+require './IPA_API/slimEx/php-di/php-di/src/ContainerBuilder.php';
 
 // Instantiate PHP-DI ContainerBuilder
 $containerBuilder = new ContainerBuilder();
